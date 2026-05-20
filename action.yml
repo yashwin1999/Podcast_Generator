@@ -1,0 +1,18 @@
+name: "Podcast Generator"
+author: "Yashwin B S"
+description: "Generates a feed"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "git-branch"
+  color: "red"
+inputs:
+  email:
+    description: The commiter's email
+    required: true
+    default: ${{ github.actor }}@localhost
+  name:
+    description: The commiter's name
+    required: true
+    default: ${{ github.actor }}
